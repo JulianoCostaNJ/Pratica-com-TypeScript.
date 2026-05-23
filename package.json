@@ -1,4 +1,13 @@
 {
+  "name": "Professorflores",
+  "version": "1.0.0",
+  "description": "Prática de exercícios em TypeScript para a disciplina de Programação Front-End",
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "ts-node src/main.ts",
+    "build": "tsc",
+    "start": "node dist/main.js"
+  },
   "devDependencies": {
     "@types/node": "^25.9.0",
     "ts-node": "^10.9.2",
