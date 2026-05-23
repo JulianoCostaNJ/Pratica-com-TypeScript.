@@ -7,7 +7,7 @@ Turma: ADS3B
 Componentes:
 RA:25356593-2 - Daniela da Silva Ferreira
 RA:25363470-2 - Fernando Araujo Alvim
-RA:252921244-2 - Juliano Henrique Costa
+RA:25291244-2 - Juliano Henrique Costa
 RA:25000914-2 - Lucas De Freitas Ferreira De Oliveira
 RA:25260842-2 - Pedro Rocha Reis
 RA:25363563-2 - Sara Kerstin Miguel
@@ -19,49 +19,50 @@ Descritivo: Calculadora simples com quatro operações.
 
 // O código solicita dois números e uma operação matemática.
 // Depois realiza o cálculo utilizando switch case.
+import * as readline from "readline";
 
-const readline = require('readline/promises');
+export function executarExercicio09(rl: readline.Interface, menu: () => void): void {
+  console.clear();
+  console.log("=========================================");
+  console.log("EXERCÍCIO 9: Calculadora Simples");
+  console.log("=========================================\n");
 
-async function main() {
+  rl.question("Digite o primeiro número: ", (entrada1) => {
+    const numero1 = parseFloat(entrada1);
 
-    const rl = readline.createInterface({
-        input: process.stdin,
-        output: process.stdout,
+    rl.question("Digite o segundo número: ", (entrada2) => {
+      const numero2 = parseFloat(entrada2);
+
+      rl.question("Digite a operação (+ - * /): ", (operacao) => {
+        if (isNaN(numero1) || isNaN(numero2)) {
+          console.log("\n[Erro]: Digite números válidos.");
+        } else {
+          switch (operacao) {
+            case "+":
+              console.log(`\nResultado: ${numero1 + numero2}`);
+              break;
+            case "-":
+              console.log(`\nResultado: ${numero1 - numero2}`);
+              break;
+            case "*":
+              console.log(`\nResultado: ${numero1 * numero2}`);
+              break;
+            case "/":
+              if (numero2 === 0) {
+                console.log("\nNão é possível dividir por zero.");
+              } else {
+                console.log(`\nResultado: ${numero1 / numero2}`);
+              }
+              break;
+            default:
+              console.log("\nOperação inválida.");
+          }
+        }
+
+        rl.question("\nPressione Enter para voltar ao menu...", () => {
+          menu();
+        });
+      });
     });
-
-    let numero1 = Number(await rl.question('Digite o primeiro numero: '));
-    let numero2 = Number(await rl.question('Digite o segundo numero: '));
-    let operacao = await rl.question('Digite a operacao (+ - * /): ');
-
-    switch (operacao) {
-
-        case '+':
-            console.log(`Resultado: ${numero1 + numero2}`);
-            break;
-
-        case '-':
-            console.log(`Resultado: ${numero1 - numero2}`);
-            break;
-
-        case '*':
-            console.log(`Resultado: ${numero1 * numero2}`);
-            break;
-
-        case '/':
-
-            if (numero2 !== 0) {
-                console.log(`Resultado: ${numero1 / numero2}`);
-            } else {
-                console.log('Nao e possível dividir por zero.');
-            }
-
-            break;
-
-        default:
-            console.log('Operacao invalida.');
-    }
-
-    rl.close();
+  });
 }
-
-main();
