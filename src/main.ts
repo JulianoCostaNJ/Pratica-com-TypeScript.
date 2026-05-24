@@ -9,7 +9,6 @@ Componentes:
             RA:25356593-2- Daniela Da Silva Ferreira
             RA:25363470-2- Fernado Araujo Alvim
             RA:25291244-2- Juliano Henrique Costa 
-            RA:25000914-2- Lucas De Freitas Ferreira De Oliveira
             RA:25260842-2- Pedro Rocha Reis
             RA:25363563-2- Sara Kerstin Miguel
 Descritivo:  Arquivo principal que importa e executa os exercícios desenvolvidos.
@@ -31,6 +30,9 @@ import { executarExercicio09 } from "./exercicio09";
 import { executarExercicio10 } from "./exercicio10";
 import { executarExercicio11 } from "./exercicio11";
 import { executarExercicio12 } from "./exercicio12";
+import { executarExercicio13 } from "./exercicio13";
+import { executarExercicio14 } from "./exercicio14";
+import { executarExercicio15 } from "./exercicio15";
 import { executarExercicio16 } from "./exercicio16";
 import { executarExercicio17 } from "./exercicio17";
 import { executarExercicio18 } from "./exercicio18";
@@ -57,6 +59,9 @@ function menu(): void {
   console.log("10 - Ordenar array");
   console.log("11 - Classe Pessoa");
   console.log("12 - Herança Aluno");
+  console.log("13 - Interface Veículo");
+  console.log("14 - Tabuada");
+  console.log("15 - Calculadora de IMC");
   console.log("16 - Validar senha");
   console.log("17 - Jogo de adivinhação");
   console.log("18 - Contar palavras");
@@ -100,6 +105,15 @@ function menu(): void {
         break;
       case "12":
         executarExercicio12(rl, menu);
+        break;
+      case "13":
+        executarExercicio13(rl, menu);
+        break;
+      case "14":
+        executarExercicio14(rl, menu);
+        break;
+      case "15":
+        executarExercicio15(rl, menu);
         break;
       case "16":
         executarExercicio16(rl, menu);

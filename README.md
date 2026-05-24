@@ -170,7 +170,6 @@ npx tsc --noEmit
 
 - Daniela Da Silva Ferreira  
 - Fernando Araujo Alvim  
-- Juliano Henrique Costa  
-- Lucas De Freitas Ferreira De Oliveira  
+- Juliano Henrique Costa   
 - Pedro Rocha Reis  
 - Sara Kerstin Miguel

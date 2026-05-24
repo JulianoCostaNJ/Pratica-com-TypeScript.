@@ -8,7 +8,6 @@ Componentes:
 RA:25356593-2 - Daniela da Silva Ferreira
 RA:25363470-2 - Fernando Araujo Alvim
 RA:25291244-2 - Juliano Henrique Costa
-RA:25000914-2 - Lucas De Freitas Ferreira De Oliveira
 RA:25260842-2 - Pedro Rocha Reis
 RA:25363563-2 - Sara Kerstin Miguel
 
